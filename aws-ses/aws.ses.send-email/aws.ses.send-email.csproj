@@ -8,9 +8,4 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="AWSSDK" Version="2.3.55.2" />
-    <PackageReference Include="MimeKit" Version="3.3.0" />
-  </ItemGroup>
-
 </Project>

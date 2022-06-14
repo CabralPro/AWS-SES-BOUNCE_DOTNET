@@ -1,11 +1,20 @@
-﻿using Amazon.SimpleEmail;
-using Amazon.SimpleEmail.Model;
-using MimeKit;
+﻿using System.Net.Mail;
 
 namespace aws.ses.send_email
 {
     public class Program
     {
+        static readonly string host = "email-smtp.us-east-1.amazonaws.com";
+        static readonly string smtpUsername = "AKIAQDGGB72YCY7E7ZUD";
+        static readonly string smtpPassword = "BDCxmd1L3IXKd54piKEpyxDu+tB/9h0JBdT7ANbGcgsi";
+        static readonly int port = 587;
+
+        static readonly string fromEmailAddress = "arthur151094@gmail.com";
+        static readonly string toEmailAddress = "arthur151094@gmail.com";
+
+        static readonly string msgSubject = "My Subject";
+        static readonly string msgBody = "My content";
+
         public static void Main(string[] args)
         {
             MainAsync().GetAwaiter().GetResult();
@@ -13,22 +22,33 @@ namespace aws.ses.send_email
 
         private static async Task MainAsync()
         {
-            using var sesClient = new AmazonSimpleEmailServiceClient();
-
-            var message = new MimeMessage
+            SmtpClient client = new(host, port)
             {
-                Headers = { new Header("X-SES-CONFIGURATION-SET", "app-config-set") },
-                From = { new MailboxAddress("App", "appemaxotech.link") },
-                To = { new MailboxAddress("Elon Musk", "elon.muskêmaxotech.link") },
-                Subject = "Test Email",
-                Body = new BodyBuilder { TextBody = "This is a test message" }.ToMessageBody()
+                UseDefaultCredentials = false,
+                Credentials = new System.Net.NetworkCredential(smtpUsername, smtpPassword),
+                EnableSsl = true
             };
 
-            await using var messageStream = new MemoryStream();
-            await message.WriteToAsync(messageStream);
+            MailAddress fromAddress = new(fromEmailAddress);
+            MailAddress toAddress = new(toEmailAddress);
 
-            var request = new SendRawEmailRequest(new RawMessage { Data = messageStream });
-            await sesClient.SendRawEmailAsync(request);
+            MailMessage mailMsg = new(fromAddress, toAddress)
+            {
+                Subject = msgSubject,
+                Body = msgBody
+            };
+
+            try
+            {
+                await client.SendMailAsync(mailMsg);
+                Console.WriteLine("Email enviado com sucesso!");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Erro ao enviar email: " + ex.Message);
+            }
+
+            Console.ReadLine();
         }
 
     }
