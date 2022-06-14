@@ -1,0 +1,15 @@
+D:\Repositorios\AWS-SES_DOTNET\aws-ses\aws-ses-bounce\aws-ses-bounce\bin\Debug\net6.0\aws-ses-bounce.exe
+D:\Repositorios\AWS-SES_DOTNET\aws-ses\aws-ses-bounce\aws-ses-bounce\bin\Debug\net6.0\aws-ses-bounce.deps.json
+D:\Repositorios\AWS-SES_DOTNET\aws-ses\aws-ses-bounce\aws-ses-bounce\bin\Debug\net6.0\aws-ses-bounce.runtimeconfig.json
+D:\Repositorios\AWS-SES_DOTNET\aws-ses\aws-ses-bounce\aws-ses-bounce\bin\Debug\net6.0\aws-ses-bounce.dll
+D:\Repositorios\AWS-SES_DOTNET\aws-ses\aws-ses-bounce\aws-ses-bounce\bin\Debug\net6.0\aws-ses-bounce.pdb
+D:\Repositorios\AWS-SES_DOTNET\aws-ses\aws-ses-bounce\aws-ses-bounce\obj\Debug\net6.0\aws-ses-bounce.csproj.AssemblyReference.cache
+D:\Repositorios\AWS-SES_DOTNET\aws-ses\aws-ses-bounce\aws-ses-bounce\obj\Debug\net6.0\aws-ses-bounce.GeneratedMSBuildEditorConfig.editorconfig
+D:\Repositorios\AWS-SES_DOTNET\aws-ses\aws-ses-bounce\aws-ses-bounce\obj\Debug\net6.0\aws-ses-bounce.AssemblyInfoInputs.cache
+D:\Repositorios\AWS-SES_DOTNET\aws-ses\aws-ses-bounce\aws-ses-bounce\obj\Debug\net6.0\aws-ses-bounce.AssemblyInfo.cs
+D:\Repositorios\AWS-SES_DOTNET\aws-ses\aws-ses-bounce\aws-ses-bounce\obj\Debug\net6.0\aws-ses-bounce.csproj.CoreCompileInputs.cache
+D:\Repositorios\AWS-SES_DOTNET\aws-ses\aws-ses-bounce\aws-ses-bounce\obj\Debug\net6.0\aws-ses-bounce.dll
+D:\Repositorios\AWS-SES_DOTNET\aws-ses\aws-ses-bounce\aws-ses-bounce\obj\Debug\net6.0\refint\aws-ses-bounce.dll
+D:\Repositorios\AWS-SES_DOTNET\aws-ses\aws-ses-bounce\aws-ses-bounce\obj\Debug\net6.0\aws-ses-bounce.pdb
+D:\Repositorios\AWS-SES_DOTNET\aws-ses\aws-ses-bounce\aws-ses-bounce\obj\Debug\net6.0\aws-ses-bounce.genruntimeconfig.cache
+D:\Repositorios\AWS-SES_DOTNET\aws-ses\aws-ses-bounce\aws-ses-bounce\obj\Debug\net6.0\ref\aws-ses-bounce.dll
