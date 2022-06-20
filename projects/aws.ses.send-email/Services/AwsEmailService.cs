@@ -6,6 +6,10 @@ using MimeKit;
 
 namespace aws.ses.send_email.Services
 {
+    /// <summary>
+    /// Documentation
+    /// https://docs.aws.amazon.com/ses/latest/APIReference/API_Operations.html
+    /// </summary>
     public class AwsEmailService
     {
         private readonly AmazonSimpleEmailServiceClient _sesClient;

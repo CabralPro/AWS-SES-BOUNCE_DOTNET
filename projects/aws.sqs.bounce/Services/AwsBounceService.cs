@@ -5,6 +5,10 @@ using aws.credentials.Models;
 
 namespace aws.sqs.bounce.Services
 {
+    /// <summary>
+    /// Documentation
+    /// https://docs.aws.amazon.com/AWSSimpleQueueService/latest/APIReference/API_Operations.html
+    /// </summary>
     public class AwsBounceService
     {
         private readonly AmazonSQSClient _sqsClient;
@@ -31,7 +35,10 @@ namespace aws.sqs.bounce.Services
             };
         }
 
-
+        /// <summary>
+        /// Example contents
+        /// https://docs.aws.amazon.com/pt_br/ses/latest/dg/event-publishing-retrieving-sns-examples.html
+        /// </summary>
         public Task<ReceiveMessageResponse> ReceiveMessagesAsync(CancellationToken stoppingToken) =>
             _sqsClient.ReceiveMessageAsync(_receiveMessageRequest, stoppingToken);
 
