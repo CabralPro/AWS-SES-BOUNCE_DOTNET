@@ -12,6 +12,9 @@ namespace aws.credentials
     /// AwsKeys:
     ///     https://us-east-1.console.aws.amazon.com/iam/home?region=us-east-1#/security_credentials
     ///     
+    /// RegionEndpoint:
+    ///     https://docs.aws.amazon.com/general/latest/gr/s3.html
+    ///
     /// SQS : 
     ///     https://us-east-1.console.aws.amazon.com/sqs/v2/home?region=us-east-1#/queues
     ///   
@@ -37,6 +40,7 @@ namespace aws.credentials
                     ""Username"": ""my-username"",
                     ""Password"": ""my-password""
                 },
+                ""AwsRegionEndpoint"": ""my-region-endpoint"",
 	            ""AwsKeys"": {
 		            ""AwsAccessKeyId"": ""my-access-key-id"",
 		            ""AwsSecretAccessKey"": ""my-secret-access-key""

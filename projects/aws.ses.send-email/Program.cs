@@ -46,7 +46,7 @@ namespace aws.ses.send_email
                 Environment.GetEnvironmentVariable("AWS_DATA"));
 
             var awsService = new AwsEmailService(
-                awsData, Amazon.RegionEndpoint.USEast1);
+                awsData, Amazon.RegionEndpoint.GetBySystemName(awsData.AwsRegionEndpoint));
 
             var response = await awsService.SendEmailAsync(
                 "arthur151094@gmail.com",

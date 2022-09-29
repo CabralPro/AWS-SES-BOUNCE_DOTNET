@@ -4,6 +4,7 @@
     {
         public SmptModel Smpt { get; set; }
         public AwsKeysModel AwsKeys { get; set; }
+        public string AwsRegionEndpoint { get; set; }
         public SqsModel Sqs { get; set; }
         public SesModel Ses { get; set; }
     }
