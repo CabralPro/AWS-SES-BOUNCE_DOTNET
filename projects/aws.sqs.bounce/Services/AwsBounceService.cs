@@ -15,12 +15,12 @@ namespace aws.sqs.bounce.Services
         private readonly ReceiveMessageRequest _receiveMessageRequest;
         private readonly DeleteMessageBatchRequest _deleteMessageRequest;
 
-        public AwsBounceService(AwsDataModel awsData, RegionEndpoint region)
+        public AwsBounceService(AwsDataModel awsData)
         {
             _sqsClient = new AmazonSQSClient(
                 awsData.AwsKeys.AwsAccessKeyId,
                 awsData.AwsKeys.AwsSecretAccessKey,
-                region);
+                RegionEndpoint.GetBySystemName(awsData.AwsRegionEndpoint));
 
             _receiveMessageRequest = new ReceiveMessageRequest
             {

@@ -45,8 +45,7 @@ namespace aws.ses.send_email
             var awsData = JsonSerializer.Deserialize<AwsDataModel>(
                 Environment.GetEnvironmentVariable("AWS_DATA"));
 
-            var awsService = new AwsEmailService(
-                awsData, Amazon.RegionEndpoint.GetBySystemName(awsData.AwsRegionEndpoint));
+            var awsService = new AwsEmailService(awsData);
 
             var response = await awsService.SendEmailAsync(
                 "arthur151094@gmail.com",

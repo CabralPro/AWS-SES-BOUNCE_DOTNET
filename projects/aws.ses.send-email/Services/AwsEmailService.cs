@@ -15,12 +15,12 @@ namespace aws.ses.send_email.Services
         private readonly AmazonSimpleEmailServiceClient _sesClient;
         private readonly AwsDataModel _awsDataModel;
 
-        public AwsEmailService(AwsDataModel awsData, RegionEndpoint region)
+        public AwsEmailService(AwsDataModel awsData)
         {
             _sesClient = new AmazonSimpleEmailServiceClient(
                 awsData.AwsKeys.AwsAccessKeyId, 
-                awsData.AwsKeys.AwsSecretAccessKey, 
-                region);
+                awsData.AwsKeys.AwsSecretAccessKey,
+                RegionEndpoint.GetBySystemName(awsData.AwsRegionEndpoint));
 
             _awsDataModel = awsData;
         }

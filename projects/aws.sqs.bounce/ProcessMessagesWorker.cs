@@ -22,7 +22,7 @@ namespace aws.sqs.bounce
                 Environment.GetEnvironmentVariable("AWS_DATA"));
 
             _logger = logger;
-            _awsBounce = new AwsBounceService(awsData, RegionEndpoint.GetBySystemName(awsData.AwsRegionEndpoint));
+            _awsBounce = new AwsBounceService(awsData);
         }
 
         protected override async Task ExecuteAsync(CancellationToken stoppingToken)
